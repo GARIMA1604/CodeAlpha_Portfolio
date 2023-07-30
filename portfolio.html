@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        /* Reset some default styles */
+body, h1, h2, h3, h4, h5, h6, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set up basic styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color:black;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #0a0404;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Styling for Home section */
+#home {
+
+    padding: 40px;
+    background-color:rgb(180, 132, 163);
+    text-align: left;
+
+}
+.photo-container {
+    margin-bottom: 20%;
+
+}
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.text-container {
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+div h3{
+    color: rgb(113, 22, 204);
+}
+.photo-container img {
+    max-width: 40vh;
+    height: auto;
+}
+@media (min-width: 576px) {
+    .content-wrapper {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .photo-container {
+        flex-basis: 40%;
+        margin-bottom: 0;
+        margin-right: 20px;
+    }
+
+    .text-container {
+        flex-basis: 60%;
+        padding: 0;
+        text-align: left;
+    }
+}
+
+
+
+/* Styling for About section */
+#about {
+    background-color: lightcyan;
+    padding: 40px;
+    text-align: left;}
+div h5{
+    color: rgb(124, 170, 215);
+ }
+ .about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.about-image {
+    flex-basis: 40%;
+    text-align: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.about-college {
+    flex-basis: 40%;
+}
+
+.about-text {
+    margin-top: 20px;
+    text-align: left;
+}
+
+
+
+
+
+/* Styling for Contact section */
+#contact {
+    background-color: rgb(173, 206, 108);
+    padding: 40px;
+    text-align: center;
+}
+
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+
+        <section id="home">
+            <div class="content-wrapper">
+            <div class="photo-container">
+                <img src="Your Photo.jpg" alt="Your Photo">
+            </div>
+            <div class="text-container">
+                <h1>Welcome to my portfolio website.</h1>
+                <h2>Hello, I'm </h2>
+                   <h3> [GARIMA]</h3>
+                <p>A SOFTWARE DEVELOPER</p>
+                <a href="#contact" class="cta-button">Get in touch</a>
+                <p>More about me</p>
+            </div>
+            </div>
+
+        </section>
+
+
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+
+            <div class="about-text">
+                <h5>Hello Everyone! MY name is Garima, a student of computer science with the dream of becoming a successful software engineering.</h5>
+                <p>When i first come into this field i was a little bit confused how to start but quiet curious to start a new journey to look for new tech, exploring new things.</P>
+                    
+                    <p>I have been class coordinnator of speakthon club , so it gives me the skills of handling the groups and organising the activities effectively.Being a part of NCC makes me to able to work with different person and work as a team player.</p>
+                <p>My hobbies are like this-: Reading book, listening songs ,traveling etcld </p>
+                <h5>I'm from</h5>
+                <h4>BHATTU KALAN, FATEHABAD</h4>
+                <a href="#contact" class="cta-button">Get in Touch</a>
+            </div>
+            <div class="about-image">
+                <img src="gju logo.jpg" alt="Your Photo">
+            </div>
+            <div class="about-college">
+                <h2>About My University</h2>
+                <h5>GURU JAMBHESHWAR UNIVERSITY OF SCIENCE AND TECHNOLOGY</h5>
+                <p>A++ GREADE </p>
+                <p>It was founded in 1995</p>
+                <P>Location:- hisar,Haryana</P>
+            </div>
+        </div>
+
+
+        </section>
+
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Contact information </p>
+            <p>Thank you for visiting my portfolio! If you'd like to get in touch, please feel free to reach out through one of the following methods:</p>
+    <ul>
+        <p>Email: [garimamachra3@gmail.com]</p>
+        <li>Phone: [*********34]</li>
+        <li>Social Media: linkedin: [GARIMA GARIMA]</li>
+    </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Garima30</p>
+    </footer>
+    <script src="script.js">
+        // Smooth scrolling for navigation links
+const navLinks = document.querySelectorAll('nav a');
+
+navLinks.forEach(link => {
+    link.addEventListener('click', e => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+        window.scrollTo({
+            top: targetSection.offsetTop,
+            behavior: 'smooth'
+        });
+    });
+});
+
+    </script>
+</body>
+</html>
